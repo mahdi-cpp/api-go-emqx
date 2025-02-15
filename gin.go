@@ -21,7 +21,6 @@ func Run() {
 		fmt.Println("Error] failed to start Gin server due to: ", err.Error())
 		return
 	}
-
 }
 
 func getRoutes() {
@@ -34,6 +33,7 @@ func getRoutes() {
 
 	api.AddUploadRoute(v2)
 	api.AddUploadRoute2(v2)
+	api.AddMqtt(v2)
 }
 
 func CORSMiddleware() gin.HandlerFunc {
